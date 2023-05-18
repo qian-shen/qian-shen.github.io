@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="20px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50" xml:space="preserve">
+    <rect x="0" y="9.22656" width="4" height="12.5469" fill="#fc625d">
+        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.8s" repeatCount="indefinite"></animate>
+        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.8s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="8" y="5.22656" width="4" height="20.5469" fill="#fdbc40">
+        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.8s" repeatCount="indefinite"></animate>
+        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.8s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="16" y="8.77344" width="4" height="13.4531" fill="#35cd4b">
+        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.8s" repeatCount="indefinite"></animate>
+        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.8s" repeatCount="indefinite"></animate>
+    </rect>
+</svg>
+
+<!-- <svg width="32px"  height="32px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-book">
+    <path d="M20 25L80 25L80 75L20 75Z" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" fill="#ffffcb" stroke="#ff7c81" stroke-width="5"></path>
+    <path d="M 50 25 L 80 25 L 80 75 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75" keyTimes="0;0.5;0.501;1" dur="0.8" begin="0s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="1;1;0;0" keyTimes="0;0.5;0.5001;1" dur="0.8" begin="0s" repeatCount="indefinite"></animate>
+    </path>
+    <path d="M 50 25 L 71.29 23.5483 L 71.29 76.4517 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75" keyTimes="0;0.5;0.501;1" dur="0.8" begin="-0.1328s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="1;1;0;0" keyTimes="0;0.5;0.5001;1" dur="0.8" begin="-0.1328s" repeatCount="indefinite"></animate>
+    </path>
+    <path d="M 50 25 L 61.45 21.9083 L 61.45 78.0917 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75" keyTimes="0;0.5;0.501;1" dur="0.8" begin="-0.264s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="1;1;0;0" keyTimes="0;0.5;0.5001;1" dur="0.8" begin="-0.264s" repeatCount="indefinite"></animate>
+    </path>
+    <path d="M 50 25 L 20 25 L 20 75 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75" keyTimes="0;0.499;0.5;1" dur="0.8" begin="-0.264s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="0;0;1;1" keyTimes="0;0.4999;0.5;1" dur="0.8" begin="-0.264s" repeatCount="indefinite"></animate>
+    </path>
+    <path d="M 50 25 L 20 25 L 20 75 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75" keyTimes="0;0.499;0.5;1" dur="0.8" begin="-0.1328s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="0;0;1;1" keyTimes="0;0.4999;0.5;1" dur="0.8" begin="-0.1328s" repeatCount="indefinite"></animate>
+    </path>
+    <path d="M 50 25 L 21.25 24.7917 L 21.25 75.2083 L 50 75" ng-attr-fill="{{config.fill}}" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" stroke-linejoin="round" stroke-linecap="round" fill="#ffffcb" stroke="#ff7c81" stroke-width="5">
+      <animate attributeName="d" calcMode="linear" values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75" keyTimes="0;0.499;0.5;1" dur="0.8" begin="0s" repeatCount="indefinite"></animate>
+      <animate attributeName="opacity" calcMode="linear" values="0;0;1;1" keyTimes="0;0.4999;0.5;1" dur="0.8" begin="0s" repeatCount="indefinite"></animate>
+    </path>
+  </svg> -->
+
+<!-- <svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" cx="50" cy="50" r="48"></circle>
+<line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="8" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+  <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+</line>
+<line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="8" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+  <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+</line>
+</svg> -->
+
+<!-- <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+    <circle fill="none" stroke="#fff" stroke-width="6" stroke-miterlimit="15" stroke-dasharray="14.2472,14.2472" cx="50" cy="50" r="47">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+  </circle>
+  <circle fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="10,10" cx="50" cy="50" r="39">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"></animateTransform>
+  </circle>
+  <g fill="#fff">
+  <rect x="30" y="35" width="5" height="30">
+    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.1"></animateTransform>
+  </rect>
+  <rect x="40" y="35" width="5" height="30">
+    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.2"></animateTransform>
+  </rect>
+  <rect x="50" y="35" width="5" height="30">
+    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3"></animateTransform>
+  </rect>
+  <rect x="60" y="35" width="5" height="30">
+    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.4"></animateTransform>
+  </rect>
+  <rect x="70" y="35" width="5" height="30">
+    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.5"></animateTransform>
+  </rect>
+  </g>
+</svg> -->
