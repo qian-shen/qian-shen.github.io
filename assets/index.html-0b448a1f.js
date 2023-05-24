@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-58d0fefd","path":"/docs/novels/","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"文章说明","slug":"文章说明","link":"#文章说明","children":[]}],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"docs/novels/README.md"}');export{e as data};
