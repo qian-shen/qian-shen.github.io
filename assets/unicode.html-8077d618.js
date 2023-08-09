@@ -1,0 +1,25 @@
+import{_ as n,p as s,q as a,Z as t}from"./framework-47a2e622.js";const p={},o=t(`<h2 id="中文转-unicode" tabindex="-1"><a class="header-anchor" href="#中文转-unicode" aria-hidden="true">#</a> 中文转 Unicode</h2><div class="language-go" data-ext="go"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;strconv&quot;</span>
+	<span class="token string">&quot;strings&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">zhToUnicode</span><span class="token punctuation">(</span>raw <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	str<span class="token punctuation">,</span> err <span class="token operator">:=</span> strconv<span class="token punctuation">.</span><span class="token function">Unquote</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">Replace</span><span class="token punctuation">(</span>strconv<span class="token punctuation">.</span><span class="token function">Quote</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>raw<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">\`\\\\u\`</span><span class="token punctuation">,</span> <span class="token string">\`\\u\`</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> err
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	sText <span class="token operator">:=</span> <span class="token string">&quot;hello 你好&quot;</span>
+	textQuoted <span class="token operator">:=</span> strconv<span class="token punctuation">.</span><span class="token function">QuoteToASCII</span><span class="token punctuation">(</span>sText<span class="token punctuation">)</span>
+	textUnquoted <span class="token operator">:=</span> textQuoted<span class="token punctuation">[</span><span class="token number">1</span> <span class="token punctuation">:</span> <span class="token function">len</span><span class="token punctuation">(</span>textQuoted<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>textUnquoted<span class="token punctuation">)</span>
+	v<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> <span class="token function">zhToUnicode</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>textUnquoted<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div>`,2),c=[o];function e(u,l){return s(),a("div",null,c)}const k=n(p,[["render",e],["__file","unicode.html.vue"]]);export{k as default};

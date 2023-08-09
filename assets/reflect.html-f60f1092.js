@@ -1,0 +1,32 @@
+import{_ as n,p as s,q as a,Z as t}from"./framework-47a2e622.js";const p={},o=t(`<h2 id="reflect-包" tabindex="-1"><a class="header-anchor" href="#reflect-包" aria-hidden="true">#</a> reflect 包</h2><div class="language-go" data-ext="go"><pre class="language-go"><code><span class="token comment">// 此函数适用于安全性</span>
+<span class="token comment">// 此函数用于生成所有poc</span>
+<span class="token keyword">func</span> <span class="token function">PocInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	methodName <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span>                <span class="token comment">// 用于保存方法名</span>
+	pocStruct <span class="token operator">:=</span> <span class="token operator">&amp;</span>poc<span class="token punctuation">.</span>PocInfo<span class="token punctuation">{</span><span class="token punctuation">}</span>             <span class="token comment">// 实例化一个poc结构体，主要用于通过反射调用poc结构体内的方法</span>
+	pocReflect <span class="token operator">:=</span> reflect<span class="token punctuation">.</span><span class="token function">TypeOf</span><span class="token punctuation">(</span>pocStruct<span class="token punctuation">)</span> <span class="token comment">// 用于获取方法的数量、方法名</span>
+
+	<span class="token comment">// 将方法名添加到数组中</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pocReflect<span class="token punctuation">.</span><span class="token function">NumMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		method <span class="token operator">:=</span> pocReflect<span class="token punctuation">.</span><span class="token function">Method</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 获取方法名</span>
+		methodName <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>methodName<span class="token punctuation">,</span> method<span class="token punctuation">.</span>Name<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 调用方法，生成poc</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> pocName <span class="token operator">:=</span> <span class="token keyword">range</span> methodName <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> fun<span class="token punctuation">,</span> bl <span class="token operator">:=</span> pocReflect<span class="token punctuation">.</span><span class="token function">MethodByName</span><span class="token punctuation">(</span>pocName<span class="token punctuation">)</span><span class="token punctuation">;</span> bl <span class="token punctuation">{</span>
+			fun<span class="token punctuation">.</span>Func<span class="token punctuation">.</span><span class="token function">Call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span>reflect<span class="token punctuation">.</span>Value<span class="token punctuation">{</span>reflect<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>pocStruct<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 调用方法生成poc</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 生成poc</span>
+<span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pocStruct <span class="token operator">:=</span> <span class="token operator">&amp;</span>poc<span class="token punctuation">.</span>PocInfo<span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 实例化一个poc结构体，主要用于通过反射调用poc结构体内的方法</span>
+    pocReflect <span class="token operator">:=</span> reflect<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>pocStruct<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pocReflect<span class="token punctuation">.</span><span class="token function">NumMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+        method <span class="token operator">:=</span> pocReflect<span class="token punctuation">.</span><span class="token function">Method</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+        method<span class="token punctuation">.</span><span class="token function">Call</span><span class="token punctuation">(</span><span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span>reflect<span class="token punctuation">.</span>Value<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 调用方法，生成poc</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div>`,2),c=[o];function e(u,l){return s(),a("div",null,c)}const i=n(p,[["render",e],["__file","reflect.html.vue"]]);export{i as default};

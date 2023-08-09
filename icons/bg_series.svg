@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:rgba(255, 228, 123, 0);display:block;z-index:1;position:relative" width="288" height="2000" preserveAspectRatio="xMidYMid" viewBox="0 0 288 2000">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:rgba(255, 228, 123, 0);display:block;z-index:1;position:relative" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 288 2000">
 <g transform="translate(144,1000) scale(1,1) translate(-144,-1000)"><style type="text/css">
   @keyframes ld-fall {
     0%    { transform: translate(0,0px) rotate3d(1,1,1,0deg); }
